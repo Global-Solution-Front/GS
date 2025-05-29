@@ -24,7 +24,7 @@ body {
 header {
   background-color: var(--bg-light);
   padding: 1.2rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.00);
+
 }
 
 nav {
@@ -68,8 +68,7 @@ main {
 }
 
 .hero {
- 
- min-height: 12vh;
+  min-height: 12vh;
   margin: 7rem auto;
   display: flex;
   flex-direction: column;
@@ -77,7 +76,6 @@ main {
   justify-content: center;
   padding: 8rem 20rem;
   text-align: center;
-  
 }
 
 .hero h1 {
@@ -95,13 +93,13 @@ main {
 .hero p {
   font-size: 1.2rem;
   max-width: 700px;
-  color: #000000;
+  color: #000;
   margin-bottom: 2rem;
 }
 
 .btn {
   background-color: var(--accent);
-  color: #ffffff;
+  color: var(--gray-tone);
   padding: 1rem 2.2rem;
   border: none;
   border-radius: 10px;
@@ -109,7 +107,7 @@ main {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
@@ -143,19 +141,18 @@ main {
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 1rem;
   border: 3px solid var(--accent);
+  margin-bottom: 1rem;
 }
 
 .membro h2 {
-  margin-bottom: 0.5rem;
   color: var(--accent);
+  margin-bottom: 0.5rem;
 }
 
 .membro p {
   font-weight: bold;
   color: var(--gray-tone);
-  margin-bottom: 1rem;
 }
 
 .membro a {
@@ -176,7 +173,7 @@ main {
 
 .faq details {
   background-color: #588c99;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -203,14 +200,12 @@ main {
   margin-top: 1rem;
   padding-left: 1rem;
   border-left: 3px solid var(--accent);
-  color: var(--gray-tone);
 }
 
 .contato h1 {
   text-align: center;
   color: var(--accent);
   margin-bottom: 2rem;
-  font-size: 2rem;
 }
 
 form {
@@ -220,20 +215,21 @@ form {
   background-color: #588c99;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.08);
 }
 
-input, textarea {
+input,
+textarea {
   padding: 1rem;
   font-size: 1rem;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-radius: 8px;
   background-color: #171e22;
   color: var(--gray-tone);
   transition: border-color 0.3s ease;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: var(--accent);
   outline: none;
 }
@@ -261,14 +257,13 @@ button:hover {
 .erro {
   color: #00815a;
   font-size: 0.9rem;
-  margin-top: -0.5rem;
 }
+
 footer {
   text-align: center;
   padding: 2rem 0;
   background-color: var(--bg-light);
   color: var(--gray-tone);
-  margin-top: 20rem;
   font-size: 0.9rem;
 }
 
@@ -283,29 +278,150 @@ footer {
 .solucao h1 {
   color: var(--accent);
   font-size: 2rem;
-  margin-bottom: 1.5rem;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .solucao p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--gray-tone);
 }
 
-footer {
+.produto-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .produto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.carousel-section {
+  background-color: #516d72;
+  padding: 60px 20px;
   text-align: center;
-  padding: 2rem 0;
-  background-color: var(--bg-light);
+}
+
+.carousel-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  background-color: #a4bb8f;
+  border-radius: 10px;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #c4000f;
+}
+
+.grafico {
+  max-width: 800px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 2rem;
+  background-color: #000;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.grafico h2 {
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.barras {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 250px;
+  gap: 1rem;
+}
+
+.barra {
+  width: 50px;
+  background-color: red;
+  height: 0;
+  animation: crescer 1.5s ease-out forwards;
+}
+
+.barra .valor {
+  position: absolute;
+  top: -1.5rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.barra .ano {
+  display: block;
+  margin-top: 0.5rem;
+  text-align: center;
   color: var(--gray-tone);
-  margin-top: 26rem;
-  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@keyframes crescer {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: var(--altura);
+  }
 }
 
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
   }
 
   .hero h1 {
@@ -319,140 +435,4 @@ footer {
   .hero p {
     font-size: 1rem;
   }
-}
-
-.produto-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-@media screen and (max-width:768px) {
-  .produto-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.carousel-section {
-      background-color: #516d72;
-      padding: 60px 20px;
-      text-align: center;
-      color: #333;
-    }
-
-    .carousel-section h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    .carousel-container {
-      position: relative;
-      max-width: 700px;
-      margin: auto;
-      overflow: hidden;
-    }
-
-    .carousel {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .slide {
-      min-width: 100%;
-      box-sizing: border-box;
-      background-color: #a4bb8f;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-      opacity: 0;
-      transition: opacity 0.5s;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .slide.active {
-      opacity: 1;
-      position: relative;
-    }
-
-    .controls {
-      margin-top: 20px;
-    }
-
-    .controls button {
-      background-color: #000000;
-      color: rgb(255, 255, 255);
-      border: none;
-      font-size: 1.5rem;
-      padding: 10px 16px;
-      margin: 0 10px;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    .controls button:hover {
-      background-color: #c4000f;
-    }
-    .grafico {
-  max-width: 800px;
-  margin: 5rem auto;
-  text-align: center;
-  padding: 2rem;
-  background-color: #000000;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.grafico h2 {
-  color: var(--accent);
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
-}
-
-.barras {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  height: 250px;
-  gap: 1rem;
-}
-
-.barra {
-  position: relative;
-  width: 50px;
-  background-color: red;
-  height: 0;
-  animation: crescer 1.5s ease-out forwards;
-}
-
-.barra::before {
-  content: '';
-  display: block;
-  height: var(--altura);
-}
-
-.barra .valor {
-  position: absolute;
-  top: -1.5rem;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-}
-
-.barra .ano {
-  margin-top: 0.5rem;
-  display: block;
-  color: var(--gray-tone);
-  font-weight: bold;
-  text-align: center;
-}
-
-@keyframes crescer {
-  0% { height: 0; }
-  100% { height: var(--altura); }
 }

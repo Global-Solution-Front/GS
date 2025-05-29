@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Solution | Início</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav>
+        <ul class="nav-links">
+          <header>
+            <nav>
+              <a href="index.html">Home</a>
+              <a href="integrantes.html">Integrantes</a>
+              <a href="faq.html">FAQ</a>
+              <a href="contato.html">Contato</a>
+              <a href="solucao.html">Solução</a>
+            </nav>
+          </header>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <section class="hero-content">
+      <h2>Bem-vindo à EcoAlerta</h2>
+      <p>Soluções digitais modernas para a saúde coletiva</p>
+      <a href="solucao.html" class="btn">Conheça nossa proposta</a>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <p>© 2025 EcoAlerta. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 5000);
+  </script>
+</body>
+</html>

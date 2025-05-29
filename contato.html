@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="integrantes.html">Integrantes</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contato.html" class="active">Contato</a>
+      <a href="solucao.html">Solução</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contato">
+      <h1>Fale Conosco</h1>
+      <form id="form-contato">
+        <input type="text" id="nome" placeholder="Seu nome" required />
+        <input type="email" id="email" placeholder="Seu e-mail" required />
+        <textarea id="mensagem" placeholder="Digite sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+        <p id="msg-erro" class="erro"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoAlerta. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

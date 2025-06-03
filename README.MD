@@ -34,6 +34,4 @@ Gabriel Santos Claudino RM 564054,
 
 Erick Berardes Bradaschia RM 565733,
 
-Gabriel Santos Claudino RM 564054
-
 Link do Repositório no GitHub

@@ -1,4 +1,4 @@
-:root {
+ :root {
   --bg-dark: #a4bb8f;
   --bg-light: #1f1f1f;
   --text-light: #2e7d32;
@@ -24,7 +24,6 @@ body {
 header {
   background-color: var(--bg-light);
   padding: 1.2rem 0;
-
 }
 
 nav {
@@ -394,45 +393,83 @@ footer {
   width: 100%;
   text-align: center;
   color: white;
-  font-weight: bold;
-}
-
-.barra .ano {
-  display: block;
-  margin-top: 0.5rem;
-  text-align: center;
-  color: var(--gray-tone);
-  font-weight: bold;
 }
 
 @keyframes crescer {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: var(--altura);
-  }
+from {
+height: 0;
+}
+to {
+height: 200px;
+}
 }
 
+
+
 @media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+body {
+font-size: 14px;
+}
 
-  .hero {
-    padding: 4rem 1rem;
-  }
+main {
+padding: 0 0.5rem;
+}
 
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+nav {
+flex-direction: column;
+gap: 0.5rem;
+}
 
-  .hero h2 {
-    font-size: 1.5rem;
-  }
+.hero {
+padding: 4rem 1rem;
+}
+}
 
-  .hero p {
-    font-size: 1rem;
-  }
+@media (min-width: 600px) {
+body {
+font-size: 15px;
+}
+
+main {
+padding: 0 1rem;
+}
+
+nav {
+flex-direction: row;
+gap: 1.5rem;
+}
+}
+
+@media (min-width: 768px) {
+body {
+font-size: 16px;
+}
+
+main {
+max-width: 720px;
+}
+
+.hero {
+padding: 6rem 4rem;
+}
+}
+
+@media (min-width: 992px) {
+main {
+max-width: 960px;
+}
+
+.hero {
+padding: 8rem 6rem;
+}
+}
+
+@media (min-width: 1300px) {
+main {
+max-width: 1200px;
+}
+
+.hero {
+padding: 10rem 8rem;
+}
 }

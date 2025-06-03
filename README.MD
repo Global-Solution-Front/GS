@@ -35,3 +35,4 @@ Gabriel Santos Claudino RM 564054,
 Erick Berardes Bradaschia RM 565733,
 
 Link do Repositório no GitHub
+https://github.com/Global-Solution-Front/GS.git

@@ -4,20 +4,20 @@ Este projeto foi desenvolvido como parte do Global Solution do curso de Análise
 Estrutura de Pastas e Arquivos
 A estrutura do projeto está organizada da seguinte forma:
 
-
+GS/
 imagens/
-97d14a12-4f37-41b3-8d20-b4628d9bdb1e.jpg,
-file.ng,
-WhatsApp Image 2025-05-13 at 21.07.45.jpeg,
-Css/
-style.css
-Global Solution/
-index.html
-script.js
-contato..html
-integrantes.html
+Felipe.jpg
+Erick.jpg
+Gabriel.jpg
+GS/
+contato.html
 faq.html
+index.html
+integrantes.html
+README.MD
+script.js
 solucao.html
+style.css
 
 
 Tecnologias Utilizadas
